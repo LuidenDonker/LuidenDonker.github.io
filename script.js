@@ -14,12 +14,7 @@ window.onload = function(){
 		client_id: 'b3c7752796d119ced339823e5404671d'
 	});
 	
-	var menuLinks = document.getElementsByClassName('genre')
+	var menuLinks = "Dubstep";
+	playSomeSound(menuLink.innerHTML);
 	
-	for (var i=0; < menuLinks.length; i++){
-		var menuLink = menuLinks[i];
-		menulinks[i].onclick = function(e){
-			playSomeSound(menuLink.innerHTML);
-		}
-	}
 };
