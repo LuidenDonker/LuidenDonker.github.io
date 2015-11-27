@@ -7,7 +7,7 @@
 <script>
 $(function()
 {
-  $.getJSON( "http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&APPID=95d38c513c13444b6290e62403391b4e", function( data )
+  $.getJSON( "http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=2bd64ba31a75d07e22ff18078b803d0f", function( data )
   {
     $('#weather').html(data.weather[0].main);
     $('#description').html(data.weather[0].description);
