@@ -1,15 +1,25 @@
-<script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
-<script>
-SC.initialize({
-  client_id: 'b3c7752796d119ced339823e5404671d'
-});
+function playSound(genre){
+	SC.get('/tracks', {
+		genres: genre,
+		bpm: {from:100}
+	}, function(tracks){
+		var random = Math.floor(Math.ramdom()*49);
+		SC.oEmbed(tracks[random].uri, {auto_play: true}, 
+		document.getElementByID('target'))
+	});
+}
 
-var track_url = 'http://soundcloud.com/forss/flickermood';
-SC.oEmbed(track_url, { auto_play: true }).then(function(oEmbed) {
-  console.log('oEmbed response: ', oEmbed);
-});
-</script>
-
-
-
-$(document).ready(main);
+window.onload = function(){
+	SC.initialize({
+		client_id: 'b3c7752796d119ced339823e5404671d'
+	});
+	
+	var menuLinks = document.getElementsByClassName('genre')
+	
+	for (var i=0; < menuLinks.length; i++){
+		var menuLink = menuLinks[i];
+		menulinks[i].onclick = function(e){
+			platSomeSound(menuLink.innerHTML);
+		}
+	}
+};
