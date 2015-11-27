@@ -19,7 +19,7 @@ window.onload = function(){
 	for (var i=0; < menuLinks.length; i++){
 		var menuLink = menuLinks[i];
 		menulinks[i].onclick = function(e){
-			platSomeSound(menuLink.innerHTML);
+			playSomeSound(menuLink.innerHTML);
 		}
 	}
 };
