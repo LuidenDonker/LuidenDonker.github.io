@@ -1,0 +1,15 @@
+#Jeboy{
+text-align: right;
+margin-top: 20%;
+
+}
+
+#boyp{
+text-align: center;
+margin-top: 5%;
+}
+
+
+<h1 id= "Jeboy">Luid en Donker</h1>
+	
+	<p id="boyp">Hier is je Boy, LuidenDonker, Gangster Rapper, Luister Mee!
