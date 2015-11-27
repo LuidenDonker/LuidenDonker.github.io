@@ -1,16 +1,39 @@
-<!doctype html>
 <html>
-	<head>
-		<title>TEst Soundcloud</title>
-		<script src="http://connect.soundcload.com/sdk.js"></script>
-		<script src= "script.js"></script>
-	</head>
-	
-	<body>
-	<ul>
-		<li><a href="#" class="genre">Dub</a></li>
-	</ul>
-	<div id = "target"></div>
-	</body>
-	
+<head>
+<title>hé</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+<script>
+$(function()
+{
+  $.getJSON( "http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&APPID=95d38c513c13444b6290e62403391b4e", function( data )
+  {
+    $('#weather').html(data.weather[0].main);
+    $('#description').html(data.weather[0].description);
+    $('#temp').html(data.main.temp);
+    $('#city').html(data.name);
+  });
+
+  $('#weather_city').val('London'),
+   $('#units_metric').attr('checked', 'checked');
+   var view = new WeatherView();
+
+   $('button').click();
+});
+</script>
+<div id='city'></div>
+<hr>
+<div id='weather'></div>
+<div id='description'></div>
+<div id='temp'></div>
+<form id="weather_status_form" method="post">
+    <label for="city">City</label>
+    <input type="text" id="weather_city" name="city" /></br>
+    <label for="units">Units</label>
+    <input type="radio" id="units_metric" name="units" value="metric"/> Metric
+    <input type="radio" id="units_imperial" name="units" value="imperial"/> Imperial</br>
+    <button type="submit">Change</button>
+  </form>
+</body>
 </html>
