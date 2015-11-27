@@ -15,6 +15,6 @@ window.onload = function(){
 	});
 	
 	var menuLinks = "Dubstep";
-	playSomeSound(menuLink.innerHTML);
+	playSomeSound('Rock');
 	
 };
