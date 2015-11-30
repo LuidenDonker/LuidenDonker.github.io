@@ -9,8 +9,8 @@ $(function()
 {
   $.getJSON( "http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&APPID=569202c6939a9d55d828d6784b54d8b3", function( data )
   {
-    $('#weather').html(data.weather.main);
-    $('#description').html(data.weather.description);
+    $('#weather').html(data.weather[0].main);
+    $('#description').html(data.weather[0].description);
     $('#temp').html(data.main.temp);
     $('#city').html(data.name);
   });
@@ -22,19 +22,28 @@ $(function()
    $('button').click();
 });
 </script>
+<script>
+function myFunction() {
+    var person = prompt("Please enter your name", "Harry Potter");
+    if (person != null) {
+        document.getElementById("demo").innerHTML =
+        "Hello " + person + "! How are you today?";
+    }
+}
+</script>
+
 <div id='city'></div>
 <hr>
 <div id='weather'></div>
 <div id='description'></div>
 <div id='temp'></div>
+<div id='demo'></div>
 
 <form id="weather_status_form" method="post">
     <label for="city">City</label>
     <input type="text" id="weather_city" name="city" /></br>
-    <label for="units">Units</label>
-    <input type="radio" id="units_metric" name="units" value="metric"/> Metric
-    <input type="radio" id="units_imperial" name="units" value="imperial"/> Imperial</br>
-    <button type="submit">Change</button>
+    <button onclick="myFunction()">Try it</button>
   </form>
-</body>
+
+  </body>
 </html>
