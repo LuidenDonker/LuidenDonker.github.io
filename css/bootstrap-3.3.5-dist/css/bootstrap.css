@@ -13,7 +13,6 @@ html {
 body {
   margin: 0;
 }
-
 article,
 aside,
 details,
@@ -43,26 +42,6 @@ audio:not([controls]) {
 template {
   display: none;
 }
-
-
-#bg {
-  position: fixed; 
-  top: -50%; 
-  left: -50%; 
-  width: 200%; 
-  height: 200%;
-}
-#bg img {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
-}
-
 a {
   background: transparent;
 }
@@ -84,7 +63,6 @@ h1 {
   margin: .67em 0;
   font-size: 2em;
 color: #ffffff;
-font-family: Impact, Charcoal, sans-serif;
 }
 mark {
   color: #000;
@@ -6223,7 +6201,4 @@ button.close {
     display: none !important;
   }
 }
-
-
-
 /*# sourceMappingURL=bootstrap.css.map */

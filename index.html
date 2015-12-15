@@ -1,49 +1,45 @@
 
-<html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-</head>
-<body>
-<script>
-$(function()
-{
-  $.getJSON( "http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&APPID=569202c6939a9d55d828d6784b54d8b3", function( data )
-  {
-    $('#weather').html(data.weather[0].main);
-    $('#description').html(data.weather[0].description);
-    $('#temp').html(data.main.temp);
-    $('#city').html(data.name);
-  });
+<!DOCTYPE html>
+		<html lang="en">
+		<head>
+		
+		<title> Friends Finder </title>
+		 <meta charset = "utf-8">
 
-  $('#weather_city').val('London'),
-   $('#units_metric').attr('checked', 'checked');
-   var view = new WeatherView();
+												
+															<link href="css/bootstrap.css" rel="stylesheet"/>
+																<link href="css/styles.css" rel="stylesheet"/>
+													
+															
+														
+															
+									
+									</head>
+		
+		<body>
+		
+	
+	<div class="col md-12 jumbotron">
+	<div class= "text-center">
+	<br></br>
+	<br></br>
+			<h1 class="titleSearch">Find new friends online!</h1>
+		<p class="subtitleSearch"> Fill out the registration form and you will soon be hanging out with your new friends!</p> <!-- Tells the user how to use the website -->
+			<br></br>
+			<br></br>
+<br></br>
+		<div class="col-md-5">
+</div>
 
-   $('button').click();
-});
-</script>
-<script>
-function myFunction() {
-    var person = prompt("Please enter your name", "Harry Potter");
-    if (person != null) {
-        document.getElementById("demo").innerHTML =
-        "Hello " + person + "! How are you today?";
-    }
-}
-</script>
+<div class="col-md-2">
+<img src="facebookLogin.png"> 
+<br></br>
+<img src="googleLogin.png">
+</div>
 
-<div id='city'></div>
-<hr>
-<div id='weather'></div>
-<div id='description'></div>
-<div id='temp'></div>
-<div id='demo'></div>
-
-<form id="weather_status_form" method="post">
-    <label for="city">City</label>
-    <input type="text" id="weather_city" name="city" /></br>
-    <button onclick="myFunction()">Try it</button>
-  </form>
-
-  </body>
-</html>
+<div class="col-md-5">
+</div>		
+		
+	
+			</body>
+				</html>
